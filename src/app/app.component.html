@@ -1,0 +1,70 @@
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Stem qui voluptas vitae omnis. Eaque, praesentium?
+<!-- interpolation -->
+<h2>{{title}}</h2>  /
+<div>
+ <li>{{title}}</li>
+</div>
+
+  
+<div *ngIf="gender == 'Male'">
+  Male Cosmetics details here.
+</div>
+
+<div *ngIf="gender == 'Female'">
+  Female Cosmetics details here:---
+  <div *ngFor="let item of cosmeticsFArr;let i=index">
+    #{{i+1}}  {{item}}
+  </div>
+</div>
+<div>
+ <div>
+  <h2>by click this button you can get the information about male and female</h2>
+  <button (click)="malecos()">Male</button>
+  <button (click)="femalecos()">Female</button>
+ </div>
+ <div [ngClass]="{'high':highlight=='M'}">male details</div>
+ <div [ngClass]="{'high':highlight=='F'}">female details</div>
+</div>
+
+<div *ngIf = "checkingif">this is ngIf example</div>
+<div>
+<p [ngStyle]="{'color':'red'}">this is ngstyle example</p> 
+
+</div>
+<!-- ngClass -->
+<!-- <div class="ribbon-color"></div> -->
+<!-- <div class="ribbon-color" *ngIf="ribbon=='RED'"></div> 
+<div class="ribbon-scolor" *ngIf="ribbon=='GREEN'"></div>  -->
+
+<div [ngClass]="{'ribbon-color':ribbon=='RED','ribbon-scolor':ribbon=='GREEN'}"></div> 
+
+<!-- ngSyle -->
+
+<div [ngStyle]="{'font-size': 'larger','color': 'blue'}">
+  pen
+</div>
+
+<div [ngStyle]="{'background-color': 'red'}">
+  MY NgStyle Mnosdnkj gjhsgdj
+</div>
+
+<input type="text" /> -->
+
+<!-- revision -->
+
+
+<!-- component -->
+
+
+<select [(ngModel)]="selectedValue">  
+  <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>  
+</select>  
+<div class='row' [ngSwitch]="selectedValue">  
+  <div *ngSwitchCase="'One'">One is Pressed</div>  
+  <div *ngSwitchCase="'Two'">Two is Selected</div>  
+  <div *ngSwitchDefault>Default Option</div>  
+</div> 
+
+  
+  <!-- <input type="button" onclick="msg()" value="call function"/>   -->
+ 
